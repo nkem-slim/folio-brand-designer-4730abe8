@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Folio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<nav>
+  <span class="logo">Nkem Vincent</span>
+  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="#about" onclick="closeNav()">About</a>
+    <a href="#skills" onclick="closeNav()">Skills</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#contact" class="nc btn" style="padding:8px 18px;font-size:13px" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+<script>
+function toggleNav(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('nav-overlay').classList.toggle('open');}
+function closeNav(){document.getElementById('nav-links').classList.remove('open');document.getElementById('nav-overlay').classList.remove('open');}
+</script>
+<section class="hero" id="hero" style="background:#fefce8;color:inherit"><div class="hi"><div class="avp">N</div><h1>Nkem Vincent Uko</h1><p class="jt">Brand Designer and Art Director</p><p class="tl">I build brands that are impossible to ignore.</p><div class="hc"><a href="#projects" class="btn">See my work</a><a href="#contact" class="btn btn-o">Get in touch</a></div></div></section>
+<section class="about" id="about" style="background:#fefce8;color:inherit"><div class="c"><div class="ag"><div><h2>Who I am</h2><p>Brand designer with 7 years creating identities for startups, cultural institutions, and global brands. I work from strategy to execution - naming, visual identity, typography, and campaign design.</p><div class="am"><div class="ami"><strong>Location</strong>Paris, FR</div><div class="ami"><strong>Email</strong><a href="mailto:contact@yourname.com">contact@yourname.com</a></div></div></div><div class="av2"></div></div></div></section>
+<section class="skills" id="skills" ><div class="c"><h2>What I do</h2><div class="sg"><span class="st sp">Brand Strategy</span><span class="st sd">Logo Design</span><span class="st so">Typography</span><span class="st sp">Illustration</span><span class="st sd">Print</span><span class="st so">Packaging</span><span class="st sp">Art Direction</span><span class="st sd">Adobe Suite</span></div></div></section>
+<section class="projects" id="projects" ><div class="c"><h2>Selected projects</h2><div class="pg"><div class="pc"><div class="pt">⭐</div><div class="pb"><h3>Fintech Brand Identity</h3><p>Full brand system for a Series A fintech - logo, colour, type, and campaign assets.</p><div class="pl"> </div></div></div><div class="pc"><div class="pt">🎨</div><div class="pb"><h3>Museum Campaign</h3><p>Art direction for a contemporary art museum annual programme. Cannes shortlist.</p><div class="pl"> </div></div></div><div class="pc"><div class="pt">📦</div><div class="pb"><h3>Packaging Design</h3><p>Product packaging for an independent coffee brand. Won three design awards.</p><div class="pl"> </div></div></div></div></div></section>
+<section class="contact" id="contact" style="background:#fefce8;color:inherit"><div class="c"><h2>New project?</h2><p class="sub">Always open to interesting briefs and long-term partnerships.</p><div class="cl"><a href="mailto:contact@yourname.com">✉ Email</a><a href="https://linkedin.com" target="_blank">in LinkedIn</a><a href="https://twitter.com" target="_blank">𝕏 Twitter</a></div></div></section>
+<footer ><p>2025 Your Name</p></footer>
+<script>
+  const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('section,footer').forEach(el=>{el.classList.add('fade-block');obs.observe(el);});
+</script>
+</body>
+</html>
